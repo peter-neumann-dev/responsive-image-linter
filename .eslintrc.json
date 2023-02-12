@@ -13,5 +13,8 @@
 		"comma-dangle": ["error", "always-multiline"],
 		"spaced-comment": ["error", "always", { "exceptions": ["!"] }],
 		"padded-blocks": "off"
+	},
+	"globals": {
+		"chrome": "readonly"
 	}
 }
