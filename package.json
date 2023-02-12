@@ -1,6 +1,6 @@
 {
 	"name": "responsive-image-linter",
-	"description": "A Chrome extension to lint responsive images",
+	"description": "A Chrome extension to test your responsive images",
 	"version": "0.1.0",
 	"author": "Peter Neumann",
 	"license": "MIT",
