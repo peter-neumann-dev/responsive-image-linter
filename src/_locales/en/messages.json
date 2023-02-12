@@ -1,0 +1,14 @@
+{
+	"ext_name": {
+		"message": "Responsive Image Linter",
+		"description": "Extension Name"
+	},
+	"ext_desc": {
+		"message": "A Chrome extension to lint responsive images",
+		"description": "Extension Description"
+	},
+	"action_default_title": {
+		"message": "Run responsive image linter",
+		"description": "Action default title on hover of extension icon"
+	}
+}

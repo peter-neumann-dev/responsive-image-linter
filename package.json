@@ -4,6 +4,7 @@
 	"version": "0.1.0",
 	"author": "Peter Neumann",
 	"license": "MIT",
+	"type": "module",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/peter-neumann-dev/responsive-image-linter.git"
