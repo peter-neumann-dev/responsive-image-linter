@@ -1,6 +1,7 @@
 {
   "name": "responsive-image-linter",
   "description": "A Chrome extension to lint responsive images",
+  "version": "0.1.0",
   "author": "Peter Neumann",
   "license": "MIT",
   "repository": {
@@ -10,5 +11,5 @@
   "bugs": {
     "url": "https://github.com/peter-neumann-dev/responsive-image-linter/issues"
   },
-  "homepage": "https://github.com/peter-neumann-dev/responsive-image-linter#readme"
+  "homepage": "https://github.com/peter-neumann-dev/responsive-image-linter#readme",
 }
