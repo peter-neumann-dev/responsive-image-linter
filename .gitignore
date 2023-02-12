@@ -20,3 +20,5 @@ nbproject
 .sass-cache
 .session
 *.log
+
+/node_modules/
