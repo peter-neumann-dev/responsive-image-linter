@@ -34,11 +34,11 @@ the results at [ausi.github.io/respimagelint](https://ausi.github.io/respimageli
 
 ### Manual
 
-1. Download the latest [Release](https://github.com/peter-neumann-dev/responsive-image-linter/releases)
+1. Download the latest [release](https://github.com/peter-neumann-dev/responsive-image-linter/releases) from the assets
 2. Unzip the downloaded archive to a folder
 3. Open the Extension Management page by navigating to `chrome://extensions`.
-4. Enable Developer Mode by clicking the toggle switch next to **Developer mode**.
-5. Click the **Load unpacked** button and select the unzipped folder to install it.
+4. Enable Developer Mode by clicking the toggle switch next to `Developer mode`.
+5. Click the `Load unpacked` button and select the unzipped folder to install it.
 6. Done! ✅
 
 ## 💎 Credits

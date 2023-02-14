@@ -1,7 +1,7 @@
 {
 	"name": "responsive-image-linter",
 	"description": "A Chrome extension to test your responsive images",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"author": "Peter Neumann",
 	"license": "MIT",
 	"type": "module",

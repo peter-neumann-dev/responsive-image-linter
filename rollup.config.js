@@ -17,6 +17,9 @@ export default defineConfig({
     simpleReloader(),
     del({ targets: 'dist/*' }),
     terser(),
-    isProduction && zip({ dir: 'releases' }),
+    isProduction && zip({
+      // eslint-disable-next-line camelcase, no-undef
+      file: `../releases/${process.env.npm_package_name}-v${process.env.npm_package_version}.zip`,
+    }),
   ],
 })
