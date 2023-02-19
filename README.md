@@ -6,12 +6,14 @@
 
 **A Chrome extension to test your responsive images**
 
+[![chrome web store](https://img.shields.io/badge/chrome_web_store-0D9488?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chrome.google.com/webstore/detail/responsive-image-linter/mnddginionlghpblkimpdalcecpnbjln)
 [![Release](https://img.shields.io/github/v/release/peter-neumann-dev/responsive-image-linter?color=0D9488&sort=semver&style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/releases)
 [![License](https://img.shields.io/github/license/peter-neumann-dev/responsive-image-linter?color=0D9488&style=for-the-badge)](LICENSE)
 
-[![chrome web store](https://img.shields.io/badge/chrome_web_store-1E293B?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chrome.google.com/webstore/detail/responsive-image-linter/mnddginionlghpblkimpdalcecpnbjln)
 [![Repository](https://img.shields.io/badge/💾_Repository-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter)
-[![Issues](https://img.shields.io/badge/🐛_Issues-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter)
+[![Issues](https://img.shields.io/badge/🐛_Issues-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/issues)
+[![Contribution](https://img.shields.io/badge/💬_Discussions-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/discussions)
+[![Contribution](https://img.shields.io/badge/👥_Contribution_Guide-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/blob/main/CONTRIBUTING.md)
 
 </div>
 
@@ -40,6 +42,12 @@ the results at [ausi.github.io/respimagelint](https://ausi.github.io/respimageli
 4. Enable Developer Mode by clicking the toggle switch next to `Developer mode`.
 5. Click the `Load unpacked` button and select the unzipped folder to install it.
 6. Done! ✅
+
+## 👥 Contributing
+
+Contributions, issues and feature requests are welcome! Check out the [contributing guidelines](CONTRIBUTING.md) for more details.
+
+You have ideas for a new ✨ feature? Feel free to open a new [discussion on GitHub](https://github.com/peter-neumann-dev/responsive-image-linter/discussions)!
 
 ## 💎 Credits
 
