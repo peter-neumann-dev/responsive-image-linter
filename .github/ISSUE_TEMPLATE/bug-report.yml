@@ -1,0 +1,64 @@
+name: 🐛 Bug report
+description: Create a report to help improve the extension.
+labels:
+  - bug
+assignees:
+  - peter-neumann-dev
+body:
+  - type: textarea
+    attributes:
+      label: Current behavior
+      description: A clear and concise description of what the bug is.
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: If possible, describe steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: What version of this extension are you using? (`chrome://extensions` and choose "Details" of the extension)
+      placeholder: 'e.g. v1.0.0'
+    validations:
+      required: true
+  - type: input
+    id: operating-system
+    attributes:
+      label: Operating system
+      description: What operating system are you using?
+      placeholder: 'e.g. macOS 13.2'
+    validations:
+      required: true
+  - type: input
+    id: browser-version
+    attributes:
+      label: Browser Version
+      description: What browser version are you using (if not original Google Chrome add the name of the chromium-based browser)?
+      placeholder: 'e.g. Chrome: 110.0.5481.100'
+    validations:
+      required: true
+  - type: checkboxes
+    id: validations
+    attributes:
+      label: Validations
+      description: Before submitting the issue, please make sure you do the following
+      options:
+        - label: Read the [Contributing Guide](https://github.com/peter-neumann-dev/responsive-image-linter/blob/main/CONTRIBUTING.md).
+          required: true
+        - label: Check that the bug is not already reported or related to the original repository of [RespImageLint](https://github.com/ausi/respimagelint).
+          required: true
+        - label: Check that there isn't already an issue that reports the same bug to avoid creating duplicates.
+          required: true
