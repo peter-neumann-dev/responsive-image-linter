@@ -12,8 +12,9 @@
 
 [![Repository](https://img.shields.io/badge/💾_Repository-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter)
 [![Issues](https://img.shields.io/badge/🐛_Issues-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/issues)
-[![Contribution](https://img.shields.io/badge/💬_Discussions-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/discussions)
-[![Contribution](https://img.shields.io/badge/👥_Contribution_Guide-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/blob/main/CONTRIBUTING.md)
+[![Discussions](https://img.shields.io/badge/💬_Discussions-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/discussions)
+[![Contribution](https://img.shields.io/badge/👥_Contribution_Guide-1E293B?style=for-the-badge)](CONTRIBUTING.md)
+[![Code of Conduct](https://img.shields.io/badge/🤝_Code_of_Conduct-1E293B?style=for-the-badge)](CODE_OF_CONDUCT.md)
 
 </div>
 
