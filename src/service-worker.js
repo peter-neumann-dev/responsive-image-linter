@@ -1,13 +1,21 @@
 import { initCollector } from './scripts/collector'
 
+/**
+ * Override the headers of the current tab
+ *
+ * @param tabId The ID of the current tab
+ * @param domain The domain of the current tab
+ */
 async function configureNetRequest (tabId, domain) {
   const domains = [domain]
+  // Define headers that to be removed from the response
   const headers = [
     'X-Frame-Options',
     'Frame-Options',
     'Content-Security-Policy',
   ]
 
+  // Configure the declarativeNetRequest rules to remove the headers
   await chrome.declarativeNetRequest.updateSessionRules({
     removeRuleIds: [1],
     addRules: [
@@ -29,6 +37,7 @@ async function configureNetRequest (tabId, domain) {
     ],
   })
 
+  // Clear the browser cache and service workers
   await chrome.browsingData.remove(
     {
       origins: domains.map((d) => `https://${d}`),
@@ -41,13 +50,13 @@ async function configureNetRequest (tabId, domain) {
 }
 
 /**
- * Run the collector script when the extension is clicked
+ * Run the collector script when the extension icon is clicked
  * @param {chrome.tabs.Tab} tab The current tab the user is on
  */
 chrome.action.onClicked.addListener(async (tab) => {
   const domain = new URL(tab.url).hostname
 
-  // Remove response headers that block iframes
+  // Invoke configureNetRequest to override the headers in the current tab
   await configureNetRequest(tab.id, domain)
 
   // Inject the collector script into the current tab
