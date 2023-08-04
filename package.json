@@ -25,11 +25,11 @@
 		"lint:js": "eslint 'src/**/*.js'"
 	},
 	"devDependencies": {
-		"@rollup/plugin-terser": "^0.4.1",
-		"@types/chrome": "^0.0.233",
-		"eslint": "^8.38.0",
-		"eslint-config-standard": "^17.0.0",
-		"rollup": "^3.20.7",
+		"@rollup/plugin-terser": "^0.4.3",
+		"@types/chrome": "^0.0.243",
+		"eslint": "^8.46.0",
+		"eslint-config-standard": "^17.1.0",
+		"rollup": "^3.27.2",
 		"rollup-plugin-chrome-extension": "^3.6.12",
 		"rollup-plugin-delete": "^2.0.0",
 		"rollup-plugin-zip": "^1.0.3"
