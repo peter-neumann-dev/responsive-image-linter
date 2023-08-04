@@ -1,12 +1,12 @@
 import { initCollector } from './scripts/collector'
 
-async function configureNetRequest(tabId, domain) {
-  const domains = [domain];
+async function configureNetRequest (tabId, domain) {
+  const domains = [domain]
   const headers = [
-    "X-Frame-Options",
-    "Frame-Options",
-    "Content-Security-Policy",
-  ];
+    'X-Frame-Options',
+    'Frame-Options',
+    'Content-Security-Policy',
+  ]
 
   await chrome.declarativeNetRequest.updateSessionRules({
     removeRuleIds: [1],
@@ -14,20 +14,20 @@ async function configureNetRequest(tabId, domain) {
       {
         id: 1,
         action: {
-          type: "modifyHeaders",
+          type: 'modifyHeaders',
           responseHeaders: headers.map((h) => ({
             header: h,
-            operation: "remove",
+            operation: 'remove',
           })),
         },
         condition: {
           requestDomains: domains,
-          resourceTypes: ["sub_frame"],
+          resourceTypes: ['sub_frame'],
           tabIds: [tabId],
         },
       },
     ],
-  });
+  })
 
   await chrome.browsingData.remove(
     {
@@ -36,8 +36,8 @@ async function configureNetRequest(tabId, domain) {
     {
       cacheStorage: true,
       serviceWorkers: true,
-    }
-  );
+    },
+  )
 }
 
 /**
@@ -45,10 +45,10 @@ async function configureNetRequest(tabId, domain) {
  * @param {chrome.tabs.Tab} tab The current tab the user is on
  */
 chrome.action.onClicked.addListener(async (tab) => {
-  const domain = new URL(tab.url).hostname;
+  const domain = new URL(tab.url).hostname
 
   // Remove response headers that block iframes
-  await configureNetRequest(tab.id, domain);
+  await configureNetRequest(tab.id, domain)
 
   // Inject the collector script into the current tab
   await chrome.scripting.executeScript({
