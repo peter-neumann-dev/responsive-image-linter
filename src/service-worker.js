@@ -54,5 +54,7 @@ chrome.action.onClicked.addListener(async (tab) => {
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },
     func: initCollector,
-  }).then(() => console.log('Script injected'))
+  })
+
+  console.log('Script injected')
 })
