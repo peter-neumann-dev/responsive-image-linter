@@ -14,7 +14,7 @@
 	"action": {
 		"default_title": "__MSG_action_default_title__"
 	},
-	"permissions": ["activeTab", "scripting"],
+	"permissions": ["activeTab", "scripting", "declarativeNetRequest", "browsingData"],
 	"background": {
 		"service_worker": "service-worker.js"
 	}
