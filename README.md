@@ -20,14 +20,13 @@
 
 ## 🚀 What it does
 
-The extension is an alternative for the original [RespImageLint](https://github.com/ausi/respimagelint)
+The extension is an alternative to the original [RespImageLint](https://github.com/ausi/respimagelint)
 bookmarklet, but uses the original code from it. Due to some browsers or used
 privacy settings, bookmarklets can't be used. This extension is a workaround for
 this problem.
 
 Instead of running on click on your bookmark, it will run the checks on click of
-the extension icon and execute the same checks as the bookmarklet and display
-the results at [ausi.github.io/respimagelint](https://ausi.github.io/respimagelint).
+the extension icon and execute the same checks as the bookmarklet.
 
 ## 🔥 Installation
 
