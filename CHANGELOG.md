@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.2.0] - 2024-06-27
+
+### 🔧 Tasks
+
+- Upgrade to latest collector.js from RespImageLint
+
 ## [v1.1.0] - 2023-08-05
 
 ### ✨ Features
@@ -58,7 +64,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add license, readme and changelog
 
-[Unreleased]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.2.0...HEAD
+[v1.2.0]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.1.0...v1.2.0
 [v1.1.0]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.0.1...v1.1.0
 [v1.0.1]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v0.2.0...v1.0.0
