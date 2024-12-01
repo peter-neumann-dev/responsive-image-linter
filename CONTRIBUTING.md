@@ -84,9 +84,9 @@ Each commit message consists of a **header**, a **body**, and a **footer**.
 <footer>
 ```
 
-* The `header` is mandatory and must conform to the [Commit Message Header](#commit-message-header) format.
-* The `body` is optional and must conform to the [Commit Message Body](#commit-message-body) format.
-* The `footer` is optional and must conform to the [Commit Message Footer](#commit-message-footer) format.
+- The `header` is mandatory and must conform to the [Commit Message Header](#commit-message-header) format.
+- The `body` is optional and must conform to the [Commit Message Body](#commit-message-body) format.
+- The `footer` is optional and must conform to the [Commit Message Footer](#commit-message-footer) format.
 
 ### Commit Message Header
 
@@ -108,7 +108,7 @@ Examples:
 The type can be one of these types:
 
 | Type         | Used for                                                                                           |
-|--------------|----------------------------------------------------------------------------------------------------|
+| ------------ | -------------------------------------------------------------------------------------------------- |
 | `[FEATURE]`  | A new feature (also small additions)                                                               |
 | `[BUGFIX]`   | A fix for a bug                                                                                    |
 | `[DOCS]`     | Documentation only changes                                                                         |
@@ -116,15 +116,15 @@ The type can be one of these types:
 | `[RELEASE]`  | Changes that are related to the release process (e.g. version bump, changelog generation, etc.)    |
 | `[WIP]`      | Changes that are work in progress (should never land on main branches and squashed before merging) |
 | `[REVERT]`   | Reverting a previous commit                                                                        |
-| `[TASK]`     | Anything not covered by other types (e.g. upgrades, refactoring, code style changes, etc.)         |                                             |
+| `[TASK]`     | Anything not covered by other types (e.g. upgrades, refactoring, code style changes, etc.)         |
 
 In case of breaking changes, the type must get prefixed with `[!!!]`.
 
 The summary is a short description of the change:
 
-* Use the imperative, present tense `Change` not `Changed` nor `Changes`
-* Capitalize the first letter
-* No dot (.) at the end
+- Use the imperative, present tense `Change` not `Changed` nor `Changes`
+- Capitalize the first letter
+- No dot (.) at the end
 
 ### Commit Message Body
 
@@ -140,9 +140,9 @@ The footer can contain references to GitHub issues, tickets, and other PRs that
 this commit closes or is related to. It should be formatted
 in **[git-trailer](https://git-scm.com/docs/git-interpret-trailers)** format.
 
-* Starting with a capital letter and a colon, followed by a space
-* In case of multiple words, use a dash (-) to separate them
-* Each trailer must be on its own line
+- Starting with a capital letter and a colon, followed by a space
+- In case of multiple words, use a dash (-) to separate them
+- Each trailer must be on its own line
 
 Examples:
 

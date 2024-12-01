@@ -6,7 +6,7 @@ import { initCollector } from './scripts/collector'
  * @param tabId The ID of the current tab
  * @param domain The domain of the current tab
  */
-async function configureNetRequest (tabId, domain) {
+async function configureNetRequest(tabId, domain) {
   const domains = [domain]
   // Define headers that to be removed from the response
   const headers = [

@@ -51,10 +51,10 @@ You have ideas for a new ✨ feature? Feel free to open a new [discussion on Git
 
 ## 💎 Credits
 
-The extention is based on the [RespImageLint](https://github.com/ausi/respimagelint)
+The extension is based on the [RespImageLint](https://github.com/ausi/respimagelint)
 bookmarklet by [ausi](https://github.com/ausi)
 
-Current used version: [8d3f989](https://github.com/ausi/respimagelint/commit/8d3f9891e38af906b0a10b0ca4f4f5044cebbf85)
+Current used version: [8d3f989](https://github.com/ausi/respimagelint/tree/8d3f9891e38af906b0a10b0ca4f4f5044cebbf85)
 
 ## ⭐ License
 

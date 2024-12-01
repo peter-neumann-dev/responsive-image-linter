@@ -1,7 +1,7 @@
+import terser from '@rollup/plugin-terser'
 import { defineConfig } from 'rollup'
 import { chromeExtension, simpleReloader } from 'rollup-plugin-chrome-extension'
 import del from 'rollup-plugin-delete'
-import terser from '@rollup/plugin-terser'
 import zip from 'rollup-plugin-zip'
 
 const isProduction = process.env.BUILD === 'production'
@@ -18,8 +18,9 @@ export default defineConfig({
     simpleReloader(),
     del({ targets: 'dist/*' }),
     terser(),
-    isProduction && zip({
-      file: `../releases/${process.env.npm_package_name}-v${process.env.npm_package_version}.zip`,
-    }),
+    isProduction &&
+      zip({
+        file: `../releases/${process.env.npm_package_name}-v${process.env.npm_package_version}.zip`,
+      }),
   ],
 })

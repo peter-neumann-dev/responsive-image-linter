@@ -1,14 +1,14 @@
 {
-	"ext_name": {
-		"message": "Responsive Image Linter",
-		"description": "Name der Erweiterung"
-	},
-	"ext_desc": {
-		"message": "Eine Chrome-Erweiterung, um responsive Bilder zu prüfen",
-		"description": "Beschreibung der Erweiterung"
-	},
-	"action_default_title": {
-		"message": "Responsive Image Linter ausführen",
-		"description": "Standardtitel der Action beim Hovern des Extension-Icons"
-	}
+  "ext_name": {
+    "message": "Responsive Image Linter",
+    "description": "Name der Erweiterung"
+  },
+  "ext_desc": {
+    "message": "Eine Chrome-Erweiterung, um responsive Bilder zu prüfen",
+    "description": "Beschreibung der Erweiterung"
+  },
+  "action_default_title": {
+    "message": "Responsive Image Linter ausführen",
+    "description": "Standardtitel der Action beim Hovern des Extension-Icons"
+  }
 }
