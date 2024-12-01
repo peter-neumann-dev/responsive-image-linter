@@ -20,7 +20,9 @@
     "lint": "npm run lint:js",
     "lint:fix": "npm run lint:js -- --fix",
     "lint:js": "eslint 'src/**/*.js'",
-    "start": "rollup -c -w"
+    "prepare": "husky",
+    "start": "rollup -c -w",
+    "test": "npm run lint"
   },
   "devDependencies": {
     "@eslint/js": "^9.5.0",
@@ -30,6 +32,7 @@
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.12.0",
+    "husky": "^9.1.7",
     "prettier": "^3.4.1",
     "prettier-plugin-packagejson": "^2.5.6",
     "rollup": "^4.28.0",
