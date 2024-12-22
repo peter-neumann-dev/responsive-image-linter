@@ -6,7 +6,7 @@ import { initCollector } from './scripts/collector'
  * @param tabId The ID of the current tab
  * @param domain The domain of the current tab
  */
-async function configureNetRequest(tabId, domain) {
+async function configureNetRequest(tabId: number, domain: string): Promise<void> {
   const domains = [domain]
   // Define headers that to be removed from the response
   const headers = [
@@ -22,15 +22,15 @@ async function configureNetRequest(tabId, domain) {
       {
         id: 1,
         action: {
-          type: 'modifyHeaders',
+          type: chrome.declarativeNetRequest.RuleActionType.MODIFY_HEADERS,
           responseHeaders: headers.map((h) => ({
             header: h,
-            operation: 'remove',
+            operation: chrome.declarativeNetRequest.HeaderOperation.REMOVE,
           })),
         },
         condition: {
           requestDomains: domains,
-          resourceTypes: ['sub_frame'],
+          resourceTypes: [chrome.declarativeNetRequest.ResourceType.SUB_FRAME],
           tabIds: [tabId],
         },
       },
@@ -53,17 +53,26 @@ async function configureNetRequest(tabId, domain) {
  * Run the collector script when the extension icon is clicked
  * @param {chrome.tabs.Tab} tab The current tab the user is on
  */
-chrome.action.onClicked.addListener(async (tab) => {
+chrome.action.onClicked.addListener(async (tab: chrome.tabs.Tab) => {
+  if (!tab.url) {
+    console.error('Tab URL is undefined')
+    return
+  }
+
   const domain = new URL(tab.url).hostname
 
   // Invoke configureNetRequest to override the headers in the current tab
-  await configureNetRequest(tab.id, domain)
+  if (tab.id) {
+    await configureNetRequest(tab.id, domain)
 
-  // Inject the collector script into the current tab
-  await chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    func: initCollector,
-  })
+    // Inject the collector script into the current tab
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: initCollector,
+    })
 
-  console.log('Script injected')
+    console.log('Script injected')
+  } else {
+    console.error('Tab ID is undefined')
+  }
 })

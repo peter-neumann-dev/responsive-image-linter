@@ -21,5 +21,11 @@ nbproject
 .session
 *.log
 
-/node_modules/
-/dist/
+# Environment variables
+*.env
+
+# Node.js
+node_modules
+
+# Build files
+dist
