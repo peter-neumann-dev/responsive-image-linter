@@ -1,21 +1,59 @@
-import { initCollector } from './scripts/collector'
+// Required empty export to treat file as module
+export {}
+
+// Add custom property to Window type for TypeScript
+declare global {
+  interface Window {
+    respImageLintCollectorRunning?: boolean
+  }
+}
 
 /**
- * Override the headers of the current tab
- *
- * @param tabId The ID of the current tab
- * @param domain The domain of the current tab
+ * Injects and initializes the collector script in the webpage
  */
-async function configureNetRequest(tabId: number, domain: string): Promise<void> {
-  const domains = [domain]
-  // Define headers that to be removed from the response
-  const headers = [
+function initCollector(): void {
+  // Exit early if collector is already running
+  if (window.respImageLintCollectorRunning) {
+    console.warn('RespImageLint collector already initialized!')
+    return
+  }
+
+  window.respImageLintCollectorRunning = true
+  console.log('RespImageLint collector initialized!')
+
+  // Create and inject the collector script
+  const script = document.createElement('script')
+  script.src = chrome.runtime.getURL('collector.js')
+  script.type = 'text/javascript'
+
+  // Handle script injection errors
+  script.onerror = () => {
+    console.error('Failed to load collector script')
+    window.respImageLintCollectorRunning = false
+  }
+
+  // Inject script and remove after loading
+  const target = document.head || document.documentElement
+  target.appendChild(script)
+  script.onload = () => script.remove()
+}
+
+/**
+ * Configures network request handling for the extension
+ * // Removes security headers to allow iframe embedding and clears cache
+ */
+async function configureNetRequest(
+  tabId: number,
+  domain: string,
+): Promise<void> {
+  // Headers that need to be removed to allow iframe embedding
+  const headersToRemove = [
     'X-Frame-Options',
     'Frame-Options',
     'Content-Security-Policy',
   ]
 
-  // Configure the declarativeNetRequest rules to remove the headers
+  // Create rule to remove security headers
   await chrome.declarativeNetRequest.updateSessionRules({
     removeRuleIds: [1],
     addRules: [
@@ -23,13 +61,13 @@ async function configureNetRequest(tabId: number, domain: string): Promise<void>
         id: 1,
         action: {
           type: chrome.declarativeNetRequest.RuleActionType.MODIFY_HEADERS,
-          responseHeaders: headers.map((h) => ({
-            header: h,
+          responseHeaders: headersToRemove.map((header) => ({
+            header,
             operation: chrome.declarativeNetRequest.HeaderOperation.REMOVE,
           })),
         },
         condition: {
-          requestDomains: domains,
+          requestDomains: [domain],
           resourceTypes: [chrome.declarativeNetRequest.ResourceType.SUB_FRAME],
           tabIds: [tabId],
         },
@@ -37,42 +75,33 @@ async function configureNetRequest(tabId: number, domain: string): Promise<void>
     ],
   })
 
-  // Clear the browser cache and service workers
+  // Clear cache and service workers for the domain
   await chrome.browsingData.remove(
-    {
-      origins: domains.map((d) => `https://${d}`),
-    },
-    {
-      cacheStorage: true,
-      serviceWorkers: true,
-    },
+    { origins: [`https://${domain}`] },
+    { cacheStorage: true, serviceWorkers: true },
   )
 }
 
-/**
- * Run the collector script when the extension icon is clicked
- * @param {chrome.tabs.Tab} tab The current tab the user is on
- */
+// Listen for extension icon clicks
 chrome.action.onClicked.addListener(async (tab: chrome.tabs.Tab) => {
-  if (!tab.url) {
-    console.error('Tab URL is undefined')
+  // Validate tab URL exists
+  if (!tab.url || !tab.id) {
+    console.error('Invalid tab information')
     return
   }
 
   const domain = new URL(tab.url).hostname
 
-  // Invoke configureNetRequest to override the headers in the current tab
-  if (tab.id) {
+  try {
+    // Configure network requests and inject collector script
     await configureNetRequest(tab.id, domain)
-
-    // Inject the collector script into the current tab
     await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: initCollector,
     })
 
-    console.log('Script injected')
-  } else {
-    console.error('Tab ID is undefined')
+    console.log('Extension initialized successfully')
+  } catch (error) {
+    console.error('Extension initialization failed:', error)
   }
 })

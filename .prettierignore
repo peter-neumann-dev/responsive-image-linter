@@ -1,2 +1,3 @@
 **/*.svg
 package-lock.json
+public/collector.js

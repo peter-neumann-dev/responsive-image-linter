@@ -12,7 +12,6 @@
 
 [![Repository](https://img.shields.io/badge/💾_Repository-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter)
 [![Issues](https://img.shields.io/badge/🐛_Issues-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/issues)
-[![Discussions](https://img.shields.io/badge/💬_Discussions-1E293B?style=for-the-badge)](https://github.com/peter-neumann-dev/responsive-image-linter/discussions)
 [![Contribution](https://img.shields.io/badge/👥_Contribution_Guide-1E293B?style=for-the-badge)](CONTRIBUTING.md)
 [![Code of Conduct](https://img.shields.io/badge/🤝_Code_of_Conduct-1E293B?style=for-the-badge)](CODE_OF_CONDUCT.md)
 
@@ -54,7 +53,8 @@ You have ideas for a new ✨ feature? Feel free to open a new [discussion on Git
 The extension is based on the [RespImageLint](https://github.com/ausi/respimagelint)
 bookmarklet by [ausi](https://github.com/ausi)
 
-Current used version: [8d3f989](https://github.com/ausi/respimagelint/tree/8d3f9891e38af906b0a10b0ca4f4f5044cebbf85)
+Current used version:
+[c471309](https://github.com/ausi/respimagelint/tree/c471309612ce71496ab017f0c03eda7f1c953c56)
 
 ## ⭐ License
 

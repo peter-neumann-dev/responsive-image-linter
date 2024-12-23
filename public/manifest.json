@@ -23,5 +23,11 @@
   ],
   "background": {
     "service_worker": "service-worker.js"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["collector.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

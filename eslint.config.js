@@ -29,5 +29,5 @@ export default tseslint.config(
       'padded-blocks': 'off',
     },
   },
-  { ignores: ['dist/'] },
+  { ignores: ['dist/', 'public/collector.js'] },
 )
