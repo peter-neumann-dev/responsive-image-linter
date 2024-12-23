@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.3.0] - 2024-12-23
+
+### ✨ Features
+
+- Update collector.js to latest version ([c471309](https://github.com/ausi/respimagelint/tree/c471309612ce71496ab017f0c03eda7f1c953c56))
+- Add automated collector script update functionality with new NPM commands and minification support
+- Migrate to TypeScript and Vite.js v6 for improved build performance and type safety
+
+### 🔧 Tasks
+
+- Add automated collector.js update checker via GitHub workflow
+- Refactor collector script into separate module for cleaner architecture
+- Add Husky pre-commit hooks for test execution
+- Add Prettier and standardize code formatting
+  - Configure import sorting
+  - Add eslint-config-prettier integration
+  - Format all source files to new standards
+
 ## [v1.2.0] - 2024-06-27
 
 ### 🔧 Tasks
@@ -64,7 +82,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add license, readme and changelog
 
-[Unreleased]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.3.0...HEAD
+[v1.3.0]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.2.0...v1.3.0
 [v1.2.0]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.1.0...v1.2.0
 [v1.1.0]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.0.1...v1.1.0
 [v1.0.1]: https://github.com/peter-neumann-dev/responsive-image-linter/compare/v1.0.0...v1.0.1
